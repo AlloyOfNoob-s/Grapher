@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home" class="navbar-logo">Grapher</a>
+        <ul class="navbar-links">
+            <li><a href="#home">Graph</a></li>
+            <li><a href="#about">How2use</a></li>
+            <li class="dropdown">
+                <a href="">Apperance</a>
+                <div class="dropdown-content">
+                    <a href="#web-design">Color</a>
+                    <a href="#Premade">Premade</a>
+                    <a href="#marketing">Source</a>
+                </div>
+            </li>
+            <li><a href="#contact">Report</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Sections -->
+    <section id="home">
+        <div style="width: 800px;"><canvas id="test"></canvas></div>
+        <div class="input_container">
+            <div style="align-items: center;display:flex;justify-content:center;gap:10px;">
+            <input class="input" type="text" id="column" placeholder="column">
+            <input class="input" type="text" id="row" placeholder="row">
+            </div>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;"><button id="button">Graph</button></div>
+        </div>
+    </section>
+    <section id="about">
+        <div>
+            <h1>The best Instant Graphing services</h1>
+            <br>
+            <h2>how to use:</h2>
+            <p>1. Enter the number of columns and rows you want to create</p>
+            <p>2. Enter your data</p>
+            <p>3. Click the button</p>
+            <p>4. Enjoy the graph</p>
+            <p>note: click the button again to change color</p>
+        </div>
+    </section>
+    <section id="web-design">
+        <div id="color_cont">
+            <div style="align-items: center;display:flex;justify-content:center;">
+                <h1>Want a new colors? Make your own</h1>
+            </div>
+            <div style="align-items: center;display:flex;justify-content:center;"><p>color picker</p></div>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;"><input type="color" id="color_picker" class="color-input"></div>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;">
+                <button id="color_button" class="button">Add</button>
+            </div>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;"><input class="input" type="text" id="color" placeholder="color1,color2,...."></div>
+            <br>
+        </div>
+    </section>
+    <section id="Premade">
+        <div>
+            <h1>Want a premade color?</h1>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;">
+                <div id="colorcontainer3">
+                    <div data-color="#1A1A2E" style="background-color: #1A1A2E;"></div>
+                    <div data-color="#3E2A47" style="background-color: #3E2A47;"></div>
+                    <div data-color="#C79F63" style="background-color: #C79F63;"></div>
+                    <div data-color="#F4E1C1" style="background-color: #F4E1C1;"></div>
+                    <div data-color="#FFFFF0" style="background-color: #FFFFF0;"></div>
+                    <div data-color="#4B3F72" style="background-color: #4B3F72;"></div>
+                    <div data-color="#7A6E3F" style="background-color: #7A6E3F;"></div>
+                    <div data-color="#B6A56B" style="background-color: #B6A56B;"></div>
+                    <div data-color="#F1D0A1" style="background-color: #F1D0A1;"></div>
+                </div>
+            </div>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;">
+                <button id="Color1" class="button">Apply</button>
+            </div>
+            <br>
+            <div id="colorcontainer4">
+                <div data-color="#FF5733" style="background-color: #FF5733;"></div> <!-- Coral -->
+                <div data-color="#33FF57" style="background-color: #33FF57;"></div> <!-- Lime Green -->
+                <div data-color="#3357FF" style="background-color: #3357FF;"></div> <!-- Blue -->
+                <div data-color="#FF33A1" style="background-color: #FF33A1;"></div> <!-- Pink -->
+                <div data-color="#FFC300" style="background-color: #FFC300;"></div> <!-- Gold -->
+                <div data-color="#50C878" style="background-color: #50C878;"></div> <!-- Emerald Green -->
+                <div data-color="#8A2BE2" style="background-color: #8A2BE2;"></div> <!-- Blue Violet -->
+                <div data-color="#FF6F61" style="background-color: #FF6F61;"></div> <!-- Tangerine -->
+                <div data-color="#00CED1" style="background-color: #00CED1;"></div> <!-- Dark Turquoise -->
+            </div>
+            <br>
+            <div style="align-items: center;display:flex;justify-content:center;">
+                <button id="Color2" class="button">Apply</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div>
+                <h1>Give us a bug report</h1>
+                <p>Hint: it doesn't work</p>
+                <br>
+                <div style="align-items: center;display:flex;justify-content:center;">
+                    <textarea id="report" class="input" placeholder="report"></textarea>
+                </div>
+                <br>
+                <div style="align-items: center;display:flex;justify-content:center;">
+                    <button id="report_button" class="button">Report</button>
+                </div>
+        </div>
+    </section>
+</body>
+</html>

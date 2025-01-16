@@ -1,0 +1,458 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    color: #FFFFF0;
+    background-color: #2C2C2C;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C79F63;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    color: #FFFFF0;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+.navbar-logo:hover {
+    font-size: 35px;
+}
+.navbar-logo:active {
+    transition: font-size 0.1s ease;
+    font-size: 25px;
+}
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar-links a {
+    color: #FFFFF0;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+}
+
+.navbar-links a:hover {
+    font-size: 25px;
+}
+.navbar-links a:active {
+    transition: font-size 0.2s ease;
+    font-size: 15px;
+}
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #C79F63;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #FFFFF0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    font-size: 16px;
+    background-color: #B88E53;
+}
+
+/* Animation Classes */
+.fall-down {
+    animation: fallDown 0.3s ease forwards;
+}
+
+.fade-away {
+    animation: fadeAway 0.3s ease forwards;
+}
+
+/* Falling Down Animation */
+@keyframes fallDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade Away Animation */
+@keyframes fadeAway {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styles */
+section {
+    height: 100vh;
+    /*padding: 20px;*/
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: background-color 0.5s ease;
+}
+
+#home {
+    background: radial-gradient(
+        circle at center,
+        rgba(26, 26, 46, 1) 0%, /* Solid color at the edges */
+        rgba(26, 26, 46, 0.8) 50%, /* Partially transparent in the middle */
+        rgba(26, 26, 46, 0) 100% /* Fully transparent at the center */
+    );
+    padding: 10px;
+    gap: 5px;
+}
+
+#about {
+    background: linear-gradient(
+        to right,
+        rgba(62, 42, 71, 1) 0%, /* Solid color on the left */
+        rgba(62, 42, 71, 0.5) 50%, /* Partially transparent in the middle */
+        rgba(62, 42, 71, 1) 100% /* Solid color on the right */
+    );
+}
+
+#web-design {
+    background: linear-gradient(
+        to bottom,
+        rgba(75, 63, 114, 1) 0%, /* Solid color at the top */
+        rgba(75, 63, 114, 0.5) 50%, /* Partially transparent in the middle */
+        rgba(75, 63, 114, 1) 100% /* Solid color at the bottom */
+    );
+}
+
+#contact {
+    background: radial-gradient(
+        circle at center,
+        rgba(44, 44, 44, 1) 0%, /* Solid color at the edges */
+        rgba(44, 44, 44, 0.8) 50%, /* Partially transparent in the middle */
+        rgba(44, 44, 44, 0) 100% /* Fully transparent at the center */
+    ), linear-gradient(
+        to bottom,
+        rgba(44, 44, 44, 1) 0%, /* Solid color at the top */
+        rgba(44, 44, 44, 0.5) 50%, /* Partially transparent in the middle */
+        rgba(44, 44, 44, 1) 100% /* Solid color at the bottom */
+    );
+}
+
+#Premade{
+    background: radial-gradient(
+        circle at center,
+        rgba(75, 63, 114, 1) 0%, /* Solid color at the edges */
+        rgba(75, 63, 114, 0.8) 50%, /* Partially transparent in the middle */
+        rgba(75, 63, 114, 0) 100% /* Fully transparent at the center */
+    );
+}
+/* Table Styles */
+.data-table, tr, th, td {
+    transition: 0.3s ease;
+}
+
+th, td {
+    color: #2C2C2C;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #F4E1C1;
+}
+
+tr:nth-child(odd) {
+    background-color: #C79F63;
+}
+/* Input Styles */
+.input {
+    height: 25px;
+    border-radius: 12px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+    transform: scale(0.95);
+}
+
+.input:focus {
+    border: 2px solid grey;
+}
+
+#button {
+    background-color: #C79F63;
+    color: #FFFFF0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#button:hover {
+    background-color: #B88E53;
+    transform: scale(1.1);
+}
+#button:active {
+    transform: scale(0.95);
+}
+.button {
+    background-color: #C79F63;
+    color: #FFFFF0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.button:hover {
+    background-color: #B88E53;
+    transform: scale(1.1);
+}
+.button:active {
+    transform: scale(0.95);
+}
+/* Style for the color input */
+.color-input {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #C79F63;
+    border-radius: 12px;
+    background-color: #3E2A47;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-input:hover {
+    border-color: #B88E53;
+    transform: scale(1.1);
+}
+
+.color-input:focus {
+    outline: none;
+    border-color: #FFFFF0;
+    box-shadow: 0 0 5px rgba(255, 255, 240, 0.5);
+}
+
+/* Hide the default color input's dropdown arrow */
+.color-input::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.color-input::-webkit-color-swatch {
+    border: none;
+    border-radius: 8px;
+}
+
+.color-input::-moz-color-swatch {
+    border: none;
+    border-radius: 8px;
+}
+/* Style for the color container */
+#colorcontainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style for each color cell (div) */
+#colorcontainer div {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #FFFFF0; /* White border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for color cells */
+#colorcontainer div:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 0px 10px rgba(255, 255, 240, 0.5); /* Glow effect */
+}
+
+/* Active effect for color cells */
+#colorcontainer div:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Optional: Add a tooltip to show the color code */
+#colorcontainer div::after {
+    content: attr(data-color);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFF0;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#colorcontainer div:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+}
+
+#colorcontainer3 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style for each color cell (div) */
+#colorcontainer3 div {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #FFFFF0; /* White border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for color cells */
+#colorcontainer3 div:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 0px 10px rgba(255, 255, 240, 0.5); /* Glow effect */
+}
+
+/* Active effect for color cells */
+#colorcontainer3 div:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Optional: Add a tooltip to show the color code */
+#colorcontainer3 div::after {
+    content: attr(data-color);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFF0;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#colorcontainer3 div:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+}
+
+#colorcontainer4 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style for each color cell (div) */
+#colorcontainer4 div {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #FFFFF0; /* White border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for color cells */
+#colorcontainer4 div:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 0px 10px rgba(255, 255, 240, 0.5); /* Glow effect */
+}
+
+/* Active effect for color cells */
+#colorcontainer4 div:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+
+/* Optional: Add a tooltip to show the color code */
+#colorcontainer4 div::after {
+    content: attr(data-color);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFF0;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#colorcontainer4 div:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+}
